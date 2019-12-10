@@ -1,24 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uoh-yb-XU5">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Exchange Rates-->
+        <scene sceneID="VAj-KP-RgZ">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <tableViewController id="45W-sb-S4c" customClass="ExchangeRatesTableVC" customModule="ExchangeRates" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="73A-lH-kaS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ExchangeRatesIdentifier" rowHeight="60" id="cKN-RR-LfX">
+                                <rect key="frame" x="0.0" y="28" width="414" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cKN-RR-LfX" id="EdB-NH-vGw">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="45W-sb-S4c" id="tae-Q3-knB"/>
+                            <outlet property="delegate" destination="45W-sb-S4c" id="kEE-CH-P4c"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Exchange Rates" id="5wb-vl-RUH"/>
+                    <connections>
+                        <segue destination="pgV-6Q-y3P" kind="show" identifier="showExchangeRateGraphSegue" id="zNh-lj-piv"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W8r-jt-fdS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-4426" y="-994"/>
+        </scene>
+        <!--Exchange Rate GraphVC-->
+        <scene sceneID="eCf-f2-v9I">
+            <objects>
+                <viewController id="pgV-6Q-y3P" customClass="ExchangeRateGraphVC" customModule="ExchangeRates" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iD5-PK-EoQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Beq-dz-4FX" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Beq-dz-4FX" firstAttribute="top" secondItem="JSr-gO-v7e" secondAttribute="top" id="3XX-9G-oRT"/>
+                            <constraint firstItem="JSr-gO-v7e" firstAttribute="trailing" secondItem="Beq-dz-4FX" secondAttribute="trailing" id="F2K-UI-yNK"/>
+                            <constraint firstItem="JSr-gO-v7e" firstAttribute="bottom" secondItem="Beq-dz-4FX" secondAttribute="bottom" id="LDj-gO-dHM"/>
+                            <constraint firstItem="Beq-dz-4FX" firstAttribute="leading" secondItem="JSr-gO-v7e" secondAttribute="leading" id="M9z-Rw-vyJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JSr-gO-v7e"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="TCz-ra-TFB"/>
+                    <connections>
+                        <outlet property="chartView" destination="Beq-dz-4FX" id="vPW-6e-ztX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jKW-Go-2aC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3464" y="-994"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="oj4-gJ-ckL">
+            <objects>
+                <navigationController id="uoh-yb-XU5" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="11m-6h-YGp">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="45W-sb-S4c" kind="relationship" relationship="rootViewController" id="1fz-bT-SiS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jlx-pP-R3Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5400" y="-994"/>
         </scene>
     </scenes>
 </document>

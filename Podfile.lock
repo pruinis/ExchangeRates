@@ -1,0 +1,32 @@
+PODS:
+  - Charts (3.4.0):
+    - Charts/Core (= 3.4.0)
+  - Charts/Core (3.4.0)
+  - Realm (4.1.1):
+    - Realm/Headers (= 4.1.1)
+  - Realm/Headers (4.1.1)
+  - RealmSwift (4.1.1):
+    - Realm (= 4.1.1)
+  - SwiftSpinner (2.1.0)
+
+DEPENDENCIES:
+  - Charts
+  - RealmSwift
+  - SwiftSpinner
+
+SPEC REPOS:
+  trunk:
+    - Charts
+    - Realm
+    - RealmSwift
+    - SwiftSpinner
+
+SPEC CHECKSUMS:
+  Charts: 74c9f256eaf0460c0c416522d1cf8c634ea6b286
+  Realm: 25f0a8244cbb1c2271c922963ea8666fc2d8104d
+  RealmSwift: 9e2657b33764f80e4a4dffd6d440e24715782052
+  SwiftSpinner: 0f15c006307f8d8bbac075638927ec1361b565d7
+
+PODFILE CHECKSUM: d111e72391caeecd97ff938b7543f3fd39231d13
+
+COCOAPODS: 1.8.4
