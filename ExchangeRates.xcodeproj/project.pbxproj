@@ -17,6 +17,10 @@
 		D57A5DB9239FE3B700FD24AC /* ExchangeRateGraphVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57A5DB8239FE3B700FD24AC /* ExchangeRateGraphVC.swift */; };
 		D57A5DC823A03F2600FD24AC /* HistoryRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57A5DC723A03F2600FD24AC /* HistoryRate.swift */; };
 		D57A5DCA23A03F2D00FD24AC /* ExchangeRateGraphViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57A5DC923A03F2D00FD24AC /* ExchangeRateGraphViewModel.swift */; };
+		D57A5DD823A07ECF00FD24AC /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57A5DD523A07ECF00FD24AC /* RealmManager.swift */; };
+		D57A5DD923A07ECF00FD24AC /* Translator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57A5DD623A07ECF00FD24AC /* Translator.swift */; };
+		D57A5DDA23A07ECF00FD24AC /* DefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57A5DD723A07ECF00FD24AC /* DefaultsManager.swift */; };
+		D57A5DDC23A07F6400FD24AC /* RealmRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57A5DDB23A07F6400FD24AC /* RealmRate.swift */; };
 		D5D4D45D239E974E00390637 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D4D45C239E974E00390637 /* AppDelegate.swift */; };
 		D5D4D45F239E974E00390637 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D4D45E239E974E00390637 /* SceneDelegate.swift */; };
 		D5D4D464239E974E00390637 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5D4D462239E974E00390637 /* Main.storyboard */; };
@@ -35,6 +39,10 @@
 		D57A5DB8239FE3B700FD24AC /* ExchangeRateGraphVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExchangeRateGraphVC.swift; sourceTree = "<group>"; };
 		D57A5DC723A03F2600FD24AC /* HistoryRate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryRate.swift; sourceTree = "<group>"; };
 		D57A5DC923A03F2D00FD24AC /* ExchangeRateGraphViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExchangeRateGraphViewModel.swift; sourceTree = "<group>"; };
+		D57A5DD523A07ECF00FD24AC /* RealmManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		D57A5DD623A07ECF00FD24AC /* Translator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Translator.swift; sourceTree = "<group>"; };
+		D57A5DD723A07ECF00FD24AC /* DefaultsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultsManager.swift; sourceTree = "<group>"; };
+		D57A5DDB23A07F6400FD24AC /* RealmRate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmRate.swift; sourceTree = "<group>"; };
 		D5D4D459239E974E00390637 /* ExchangeRates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExchangeRates.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5D4D45C239E974E00390637 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5D4D45E239E974E00390637 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +78,7 @@
 				D51A5B3D239EE50100C0E801 /* ExchangeRate.swift */,
 				D57A5DC723A03F2600FD24AC /* HistoryRate.swift */,
 				D51A5B3F239F013C00C0E801 /* Rate.swift */,
+				D57A5DDB23A07F6400FD24AC /* RealmRate.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -100,6 +109,16 @@
 			path = DataModel;
 			sourceTree = "<group>";
 		};
+		D57A5DD423A07ECF00FD24AC /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				D57A5DD523A07ECF00FD24AC /* RealmManager.swift */,
+				D57A5DD623A07ECF00FD24AC /* Translator.swift */,
+				D57A5DD723A07ECF00FD24AC /* DefaultsManager.swift */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
 		D5D4D450239E974E00390637 = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +140,7 @@
 			children = (
 				D5D4D45C239E974E00390637 /* AppDelegate.swift */,
 				D5D4D45E239E974E00390637 /* SceneDelegate.swift */,
+				D57A5DD423A07ECF00FD24AC /* Class */,
 				D51A5B3C239EE4B600C0E801 /* Model */,
 				D51A5B47239F3CEF00C0E801 /* DataModel */,
 				D51A5B44239F35A000C0E801 /* ViewController */,
@@ -205,18 +225,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D57A5DD823A07ECF00FD24AC /* RealmManager.swift in Sources */,
 				D57A5DB9239FE3B700FD24AC /* ExchangeRateGraphVC.swift in Sources */,
 				D51A5B3A239EE23400C0E801 /* ApiError.swift in Sources */,
 				D51A5B46239F361D00C0E801 /* ExchangeRatesTableVC.swift in Sources */,
 				D57A5DC823A03F2600FD24AC /* HistoryRate.swift in Sources */,
 				D57A5DCA23A03F2D00FD24AC /* ExchangeRateGraphViewModel.swift in Sources */,
 				D5D4D45D239E974E00390637 /* AppDelegate.swift in Sources */,
+				D57A5DDC23A07F6400FD24AC /* RealmRate.swift in Sources */,
+				D57A5DDA23A07ECF00FD24AC /* DefaultsManager.swift in Sources */,
 				D51A5B43239F078100C0E801 /* DateFormatter+Format.swift in Sources */,
 				D51A5B40239F013C00C0E801 /* Rate.swift in Sources */,
 				D51A5B49239F3D5400C0E801 /* ExchangeRatesViewModel.swift in Sources */,
 				D5D4D45F239E974E00390637 /* SceneDelegate.swift in Sources */,
 				D51A5B3E239EE50100C0E801 /* ExchangeRate.swift in Sources */,
 				D51A5B3B239EE23400C0E801 /* ApiClient.swift in Sources */,
+				D57A5DD923A07ECF00FD24AC /* Translator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

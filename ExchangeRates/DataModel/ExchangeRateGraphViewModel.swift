@@ -58,6 +58,16 @@ class ExchangeRateGraphViewModel {
         let xAxisValue = chartView?.xAxis
         xAxisValue?.valueFormatter = axisFormatDelegate
         xAxisValue?.granularity = 1
+        xAxisValue?.labelPosition = .bothSided
+        
+        // Disable all interactions
+        chartView?.dragEnabled = false
+        chartView?.pinchZoomEnabled = false
+        chartView?.setScaleEnabled(false)
+        chartView?.highlightPerTapEnabled = false
+        chartView?.highlightPerDragEnabled = false
+        chartView?.doubleTapToZoomEnabled = false
+        
         chartView?.data = chartData
     }
 }
