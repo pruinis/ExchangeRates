@@ -7,19 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D51A5B3A239EE23400C0E801 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51A5B38239EE23400C0E801 /* ApiError.swift */; };
+		D51A5B3B239EE23400C0E801 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51A5B39239EE23400C0E801 /* ApiClient.swift */; };
+		D51A5B3E239EE50100C0E801 /* ExchangeRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51A5B3D239EE50100C0E801 /* ExchangeRate.swift */; };
+		D51A5B40239F013C00C0E801 /* Rate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51A5B3F239F013C00C0E801 /* Rate.swift */; };
+		D51A5B43239F078100C0E801 /* DateFormatter+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51A5B42239F078100C0E801 /* DateFormatter+Format.swift */; };
+		D51A5B46239F361D00C0E801 /* ExchangeRatesTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51A5B45239F361D00C0E801 /* ExchangeRatesTableVC.swift */; };
+		D51A5B49239F3D5400C0E801 /* ExchangeRatesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51A5B48239F3D5400C0E801 /* ExchangeRatesViewModel.swift */; };
+		D57A5DB9239FE3B700FD24AC /* ExchangeRateGraphVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57A5DB8239FE3B700FD24AC /* ExchangeRateGraphVC.swift */; };
+		D57A5DC823A03F2600FD24AC /* HistoryRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57A5DC723A03F2600FD24AC /* HistoryRate.swift */; };
+		D57A5DCA23A03F2D00FD24AC /* ExchangeRateGraphViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57A5DC923A03F2D00FD24AC /* ExchangeRateGraphViewModel.swift */; };
 		D5D4D45D239E974E00390637 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D4D45C239E974E00390637 /* AppDelegate.swift */; };
 		D5D4D45F239E974E00390637 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D4D45E239E974E00390637 /* SceneDelegate.swift */; };
-		D5D4D461239E974E00390637 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D4D460239E974E00390637 /* ViewController.swift */; };
 		D5D4D464239E974E00390637 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5D4D462239E974E00390637 /* Main.storyboard */; };
 		D5D4D466239E974F00390637 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5D4D465239E974F00390637 /* Assets.xcassets */; };
 		D5D4D469239E974F00390637 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5D4D467239E974F00390637 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D51A5B38239EE23400C0E801 /* ApiError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
+		D51A5B39239EE23400C0E801 /* ApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		D51A5B3D239EE50100C0E801 /* ExchangeRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRate.swift; sourceTree = "<group>"; };
+		D51A5B3F239F013C00C0E801 /* Rate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rate.swift; sourceTree = "<group>"; };
+		D51A5B42239F078100C0E801 /* DateFormatter+Format.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Format.swift"; sourceTree = "<group>"; };
+		D51A5B45239F361D00C0E801 /* ExchangeRatesTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRatesTableVC.swift; sourceTree = "<group>"; };
+		D51A5B48239F3D5400C0E801 /* ExchangeRatesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRatesViewModel.swift; sourceTree = "<group>"; };
+		D57A5DB8239FE3B700FD24AC /* ExchangeRateGraphVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExchangeRateGraphVC.swift; sourceTree = "<group>"; };
+		D57A5DC723A03F2600FD24AC /* HistoryRate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryRate.swift; sourceTree = "<group>"; };
+		D57A5DC923A03F2D00FD24AC /* ExchangeRateGraphViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExchangeRateGraphViewModel.swift; sourceTree = "<group>"; };
 		D5D4D459239E974E00390637 /* ExchangeRates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExchangeRates.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5D4D45C239E974E00390637 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5D4D45E239E974E00390637 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D5D4D460239E974E00390637 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D5D4D463239E974E00390637 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D5D4D465239E974F00390637 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D5D4D468239E974F00390637 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +55,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D51A5B37239EE23400C0E801 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				D51A5B38239EE23400C0E801 /* ApiError.swift */,
+				D51A5B39239EE23400C0E801 /* ApiClient.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		D51A5B3C239EE4B600C0E801 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D51A5B3D239EE50100C0E801 /* ExchangeRate.swift */,
+				D57A5DC723A03F2600FD24AC /* HistoryRate.swift */,
+				D51A5B3F239F013C00C0E801 /* Rate.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D51A5B41239F078100C0E801 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D51A5B42239F078100C0E801 /* DateFormatter+Format.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		D51A5B44239F35A000C0E801 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D51A5B45239F361D00C0E801 /* ExchangeRatesTableVC.swift */,
+				D57A5DB8239FE3B700FD24AC /* ExchangeRateGraphVC.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		D51A5B47239F3CEF00C0E801 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				D51A5B48239F3D5400C0E801 /* ExchangeRatesViewModel.swift */,
+				D57A5DC923A03F2D00FD24AC /* ExchangeRateGraphViewModel.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
 		D5D4D450239E974E00390637 = {
 			isa = PBXGroup;
 			children = (
@@ -58,7 +121,11 @@
 			children = (
 				D5D4D45C239E974E00390637 /* AppDelegate.swift */,
 				D5D4D45E239E974E00390637 /* SceneDelegate.swift */,
-				D5D4D460239E974E00390637 /* ViewController.swift */,
+				D51A5B3C239EE4B600C0E801 /* Model */,
+				D51A5B47239F3CEF00C0E801 /* DataModel */,
+				D51A5B44239F35A000C0E801 /* ViewController */,
+				D51A5B41239F078100C0E801 /* Extension */,
+				D51A5B37239EE23400C0E801 /* API */,
 				D5D4D462239E974E00390637 /* Main.storyboard */,
 				D5D4D465239E974F00390637 /* Assets.xcassets */,
 				D5D4D467239E974F00390637 /* LaunchScreen.storyboard */,
@@ -138,9 +205,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5D4D461239E974E00390637 /* ViewController.swift in Sources */,
+				D57A5DB9239FE3B700FD24AC /* ExchangeRateGraphVC.swift in Sources */,
+				D51A5B3A239EE23400C0E801 /* ApiError.swift in Sources */,
+				D51A5B46239F361D00C0E801 /* ExchangeRatesTableVC.swift in Sources */,
+				D57A5DC823A03F2600FD24AC /* HistoryRate.swift in Sources */,
+				D57A5DCA23A03F2D00FD24AC /* ExchangeRateGraphViewModel.swift in Sources */,
 				D5D4D45D239E974E00390637 /* AppDelegate.swift in Sources */,
+				D51A5B43239F078100C0E801 /* DateFormatter+Format.swift in Sources */,
+				D51A5B40239F013C00C0E801 /* Rate.swift in Sources */,
+				D51A5B49239F3D5400C0E801 /* ExchangeRatesViewModel.swift in Sources */,
 				D5D4D45F239E974E00390637 /* SceneDelegate.swift in Sources */,
+				D51A5B3E239EE50100C0E801 /* ExchangeRate.swift in Sources */,
+				D51A5B3B239EE23400C0E801 /* ApiClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
