@@ -11,16 +11,16 @@ import Foundation
 class ExchangeRatesViewModel {
     
     let apiClient = ApiClient()
-    var exchangeRate: ExchangeRate?
+    var rates = [Rate]()
     
     func fetchLatestExchangeRateUSD(completion: @escaping () -> Void) {        
         apiClient.fetchLatestExchangeRateUSD { [weak self] (result) in
             DispatchQueue.main.async {
+                self?.rates.removeAll()
                 switch result {
                     case .success(let exchangeRate):
-                        self?.exchangeRate = exchangeRate
-                    case .failure:
-                        self?.exchangeRate = nil
+                        self?.rates.append(contentsOf: exchangeRate.rates)
+                case .failure: break
                 }
                 completion()
             }
