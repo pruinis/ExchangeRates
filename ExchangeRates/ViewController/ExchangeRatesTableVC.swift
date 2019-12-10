@@ -18,8 +18,14 @@ class ExchangeRatesTableVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
                 
+        // Setup spinner
+        SwiftSpinner.setTitleColor(.lightGray)
+        SwiftSpinner.showBlurBackground = false
+        SwiftSpinner.shared.outerColor = .lightGray
         SwiftSpinner.show("Loading data...")
-        viewModel.fetchLatestExchangeRateUSD { [weak self] in
+        
+        // Data loaded, reload tableView
+        viewModel.showExchangeRateUSD { [weak self] in
             self?.tableView.reloadData()
             SwiftSpinner.hide()
         }

@@ -18,6 +18,8 @@ class ExchangeRateGraphVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = viewModel.symbols
                
         SwiftSpinner.show("Loading data...")
         viewModel.fetchLastWeekHistoryUSD(chartView: chartView) {            
