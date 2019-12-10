@@ -32,7 +32,7 @@ class ExchangeRatesTableVC: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.exchangeRate?.rates.count ?? 0
+        return viewModel.rates.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -40,15 +40,9 @@ class ExchangeRatesTableVC: UITableViewController {
         cell.textLabel?.numberOfLines = 0
         cell.textLabel?.lineBreakMode = .byWordWrapping
         
-        let rates = viewModel.exchangeRate?.rates
-        if let rate = rates?[indexPath.row] {
-            let exchangeRate = String(format: "%.2f", rate.exchangeRate)
-            cell.textLabel?.text = rate.currencyName + "\n" + exchangeRate
-        }
-        else {
-            cell.textLabel?.text = nil
-        }
-
+        let rate = viewModel.rates[indexPath.row]
+        let exchangeRate = String(format: "%.2f", rate.exchangeRate)
+        cell.textLabel?.text = rate.currencyName + "\n" + exchangeRate
         return cell
     }
     
@@ -63,13 +57,9 @@ class ExchangeRatesTableVC: UITableViewController {
         if  segue.identifier == showExchangeRateGraphSegue,
             let destination = segue.destination as? ExchangeRateGraphVC,
             let rateIndex = tableView.indexPathForSelectedRow?.row {
-            
-            
-            let rates = viewModel.exchangeRate?.rates
-            if let rate = rates?[rateIndex] {
-                destination.viewModel.apiClient = viewModel.apiClient
-                destination.viewModel.symbols = rate.currencyName
-            }
+            let rate = viewModel.rates[rateIndex]
+            destination.viewModel.apiClient = viewModel.apiClient
+            destination.viewModel.symbols = rate.currencyName
         }
     }
 }
